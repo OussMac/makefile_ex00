@@ -14,7 +14,7 @@ all: $(NAME)
 $(NAME): $(OBJ_FILES)
 	$(ARCHIVE) $(NAME) $(OBJ_FILES)
 
-srcs/%.o: srcs/%.c
+srcs/%.o: srcs/%.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
